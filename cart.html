@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="cart.css">
+   <script src="https://kit.fontawesome.com/8dde53c92c.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <p><a href="index.html"><img src="https://i.ibb.co/kDVwgwp/logo.png" alt="RedStore" width="125px" /></a></p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="#">Category</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="acc.html">Account</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="cart">
+            <div class="top">
+                <h2>shopping Cart</h2>
+                <h2 id="itemA">3 Items</h2>
+            </div>
+            <table cellspacing="0" class="table-head">
+                <tr>
+                    <th width="150" class="head-img">Image</th>
+                    <th width="360">Name</th>
+                    <th width="150">Price</th>
+                    <th width="70">Delete</th>
+                </tr>
+            </table>
+            <!-- Inside the <table id="root"> tag, add rows for each item with image, name, and price -->
+<table id="root" cellspacing="0">
+    <!-- Example row for item 1 -->
+    <tr>
+      <td width="150" class="item-image"><img src="https://i.ibb.co/b7ZVzYr/product-2.jpg" alt="Item 1" width="120px"></td>
+      <td width="360" class="item-name">HRX Sport Shoes</td>
+      <td width="150" class="item-price">₹750.00</td>
+      <td width="70"><button onclick="deleteItem(1)">Delete</button></td>
+    </tr>
+    
+    <tr>
+      <td width="150" class="item-image"><img src="https://i.ibb.co/47Sk9QL/product-1.jpg" alt="Item 2" width="120px"></td>
+      <td width="360" class="item-name">Red Printed T-shirt</td>
+      <td width="150" class="item-price">₹500.00</td>
+      <td width="70"><button onclick="deleteItem(2)">Delete</button></td>
+    </tr>
+    <tr>
+        <td width="150" class="item-image"><img src="image/cricket-kits.png" alt="Item 3" width="120px"></td>
+        <td width="360" class="item-name">cricket-kits</td>
+        <td width="150" class="item-price">₹20000.00</td>
+        <td width="70"><button onclick="deleteItem(2)">Delete</button></td>
+      </tr>
+    <!-- Add more rows as needed -->
+  </table>
+  
+            <table id="root" cellspacing="0"></table>
+            <hr>
+        </div>
+
+        <div class="summary">
+            <div class="top">
+                <h2>Order Summary</h2>
+            </div>
+            <div class="detail">
+                <h2 id="itemB">3 Items</h2>
+                <h2 id="totalA">₹21250.00</h2>
+            </div>
+            <div style="margin-top: 30px; padding: 0 30px;">
+                <h2>Shipping</h2>
+                <input type="text" placeholder="Standard delivery">
+                <h2>Promo Code</h2>
+                <input type="text" placeholder="Enter your code" id="promocode">
+                <button class="first-btn" id="promo" oneclick="promo()">Apply</button> 
+            </div>
+            <hr>
+            <div class="top">
+                <h2>Total</h2>
+                <h2 id="totalB">₹21250.00</h2>
+            </div>
+            <div style="padding: 0 10px; margin-bottom: 20px;">
+                <button class="checkout">Check out</button>
+            
+            </div>
+        </div>
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>
